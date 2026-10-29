@@ -5,11 +5,11 @@ QTech is a local-first encrypted messaging application developed using Swift and
 
 The application allows users to send and display text messages and image attachments, with content encrypted before being saved locally.
 
-**Important:** This is a single-device messaging prototype, not a network-based or end-to-end encrypted messaging service.
+**Note:** This is a single-device messaging prototype, not a network-based or end-to-end encrypted messaging service.
 
 ## 1. How I Built the Application
 
-I used a lightweight MVVM architecture to separate the user interface, messaging operations, encryption, and persistent storage.
+I used a simple MVVM architecture to separate the user interface, messaging operations, encryption, and persistent storage.
 
 I started by creating the SwiftData message model and then implemented the encryption and key-management services. After verifying encryption, I built the messaging interface and added encrypted image attachments.
 
@@ -106,8 +106,6 @@ This implementation provides encryption at rest on a single device. It does not 
 
 Message metadata is not fully encrypted, and the application has access to decrypted content when displaying it.
 
-The application has not undergone an independent security audit.
-
 ## 5. Features and Creativity
 
 ### Implemented Features
@@ -128,7 +126,7 @@ The application has not undergone an independent security audit.
 
 I prioritized a familiar instant-messaging interface with distinct message bubbles, timestamps, a multiline message composer, and quick image selection.
 
-I also separated the encryption and file-storage functionality into dedicated services so that the implementation remains organized and extensible.
+I also separated the encryption and file-storage functionality into dedicated services so that the implementation remains organized.
 
 Given the assessment's time constraints, I chose to prioritize a complete local messaging experience rather than introducing an unfinished backend.
 
@@ -138,9 +136,9 @@ Given the assessment's time constraints, I chose to prioritize a complete local 
 - No authentication or user accounts
 - No push notifications or delivery receipts
 - Image attachments only
-- No multiple-conversation support
-- No automated test suite or formal security audit
-
+- No multiple-conversation support (would have liked to implement this) 
+- No automated test suite
+  
 ## Testing and Verification
 
 The following manual checks were completed:
@@ -158,4 +156,4 @@ The following manual checks were completed:
 
 QTech demonstrates my ability to build a functional SwiftUI application using local persistence, authenticated encryption, secure key management, and a modular architecture.
 
-The project was designed and implemented within a limited technical-assessment timeframe, emphasizing working functionality, code organization, and clearly documented security boundaries.
+The project was designed and implemented within a limited timeframe, emphasizing working functionality and code organization. 
