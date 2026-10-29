@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct QTechApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChatView()
         }
+        .modelContainer(for: MessageItem.self)
     }
 }
